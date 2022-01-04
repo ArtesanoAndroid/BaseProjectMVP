@@ -1,7 +1,8 @@
-package com.eaglecode16.basemvp
+package com.eaglecode16.basemvp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.eaglecode16.basemvp.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
