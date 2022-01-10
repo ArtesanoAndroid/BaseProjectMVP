@@ -2,6 +2,9 @@
 
 ## Proyecto base para una app android usando MVP
 
+
+:crystal_ball: Desarrollado con:
+
 |       ¿Qué?       |   ¿Cómo?   |
 |:-----------------:|:----------:|
 |    Concurrencia   | Coroutines |
