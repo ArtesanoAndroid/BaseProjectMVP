@@ -2,6 +2,10 @@
 
 ## Proyecto base para una app android usando MVP
 
+### ¿Cómo funciona MVP?
+
+![Sample](https://ibb.co/cY3FtJk "Sample")
+
 
 :crystal_ball: Desarrollado con:
 
