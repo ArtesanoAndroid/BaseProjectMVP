@@ -2,11 +2,11 @@ package com.eaglecode16.basemvp.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import coil.load
 import com.eaglecode16.basemvp.databinding.ActivityMainBinding
-import com.eaglecode16.basemvp.model.datasource.network.RetrofitClient
-import com.eaglecode16.basemvp.model.interactors.impl.GetRandomCatsData
-import com.eaglecode16.basemvp.presenter.impl.MeowPresenter
+import com.eaglecode16.basemvp.presenter.implementations.MeowPresenter
 import com.eaglecode16.basemvp.presenter.interfaces.MeowView
 
 /**
@@ -16,7 +16,7 @@ class MeowActivity : AppCompatActivity(), MeowView {
 
     private lateinit var binding: ActivityMainBinding
 
-    private val presenter by lazy { MeowPresenter(this, GetRandomCatsData(RetrofitClient.service)) }
+    private val presenter by lazy { MeowPresenter(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,11 +35,21 @@ class MeowActivity : AppCompatActivity(), MeowView {
         }
     }
 
+    override fun showLoading() {
+        binding.progressBar.visibility = View.VISIBLE
+    }
+
+    override fun hideLoading() {
+        binding.progressBar.visibility = View.GONE
+    }
+
+
     override fun onSuccess(url: String) {
         binding.ivCats.load(url)
     }
 
-    override fun onFailure() {
-
+    override fun onFailure(msg: String) {
+        Toast.makeText(this@MeowActivity, msg, Toast.LENGTH_LONG).show()
     }
+
 }

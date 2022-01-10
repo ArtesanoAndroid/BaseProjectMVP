@@ -1,6 +1,8 @@
 package com.eaglecode16.basemvp.model.interactors.interfaces
 
 import com.eaglecode16.basemvp.model.datasource.network.response.RandomCatResponse
+import com.eaglecode16.basemvp.utils.State
+import java.util.*
 
 
 /**
@@ -8,5 +10,5 @@ import com.eaglecode16.basemvp.model.datasource.network.response.RandomCatRespon
  */
 interface GetRandomCatsInteractor {
 
-    suspend fun getRandomCat(): RandomCatResponse
+    suspend fun getRandomCat(): State<RandomCatResponse>
 }
