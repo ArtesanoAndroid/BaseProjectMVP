@@ -1,9 +1,9 @@
 package com.eaglecode16.basemvp.presenter.interfaces
 
-interface MeowView {
+import com.eaglecode16.basemvp.presenter.interfaces.base.BaseView
 
-    fun showLoading()
-    fun hideLoading()
+interface MeowView: BaseView {
+
     fun onSuccess(url: String)
     fun onFailure(msg: String)
 }

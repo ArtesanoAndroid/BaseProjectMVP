@@ -3,7 +3,7 @@ package com.eaglecode16.basemvp.presenter.implementations
 import com.eaglecode16.basemvp.model.interactors.impl.GetRandomCatsData
 import com.eaglecode16.basemvp.presenter.interfaces.MeowContract
 import com.eaglecode16.basemvp.presenter.interfaces.MeowView
-import com.eaglecode16.basemvp.utils.State
+import com.eaglecode16.basemvp.utils.ResourceState
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -27,11 +27,11 @@ class MeowPresenter(
             meowView.showLoading()
 
             when (val response = interactor.getRandomCat()) {
-                is State.Success -> {
+                is ResourceState.Success -> {
                     meowView.hideLoading()
                     meowView.onSuccess(response.data.url)
                 }
-                is State.Error -> {
+                is ResourceState.Error -> {
                     meowView.hideLoading()
                     meowView.onFailure(response.errorMessage)
                 }
