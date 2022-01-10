@@ -4,8 +4,7 @@
 
 ### ¿Cómo funciona MVP?
 
-![image](https://drive.google.com/file/d/1PoYci9Ziy3ZNDvTtyaytOtt9xY4DC7c_/view?usp=sharing)
-
+[![arquitectura.png](https://i.postimg.cc/DZvPP28Y/arquitectura.png)](https://postimg.cc/KKWTZh7n)
 
 :crystal_ball: Desarrollado con:
 
