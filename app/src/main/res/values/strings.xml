@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BaseMVP</string>
+    <string name="funny_cats_text">funny cats</string>
+    <string name="show_cat_text">Show me another cat, dude!</string>
 </resources>
